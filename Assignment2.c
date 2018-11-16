@@ -174,11 +174,11 @@ void* threadFunction(void *arg)
 	}
   else
 	{
-		/*retVal = pthread_setschedparam(pthread_self(), myThreadArg->threadPolicy, &myThreadArg->param);		//SCHED_FIFO, SCHED_RR, SCHED_OTHER
+		retVal = pthread_setschedparam(pthread_self(), myThreadArg->threadPolicy, &myThreadArg->param);		//SCHED_FIFO, SCHED_RR, SCHED_OTHER
 		if(retVal != 0){
 			handle_error_en(retVal, "pthread_setschedparam");
 
-    }*/
+    }
 		myThreadArg->processTime = 0;
 	}
 
